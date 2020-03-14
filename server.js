@@ -4,6 +4,8 @@ var express = require("express");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 var passport = require("./config/passport");
+const routes = require("./routes");
+
 
 // Axios is a promised-based http library, similar to jQuery's Ajax method
 // It works on the client and on the server
@@ -27,9 +29,11 @@ app.use(express.urlencoded({
 app.use(express.json());
 // Make public a static folder
 app.use(express.static("public"));
+// Use the routes folder
+app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/unit18Populater", {
+mongoose.connect("mongodb://localhost/inventorymanager", {
     useNewUrlParser: true
 });
 
