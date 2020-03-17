@@ -1,40 +1,36 @@
 import React from "react";
-import ViewInventory from "../components/viewbtn/viewButton";
-import LowInventory from "../components/lowinventory/lowInventoryBtn";
+import BackButton from "../components/backbutton/backbutton";
 import Hero from "../components/hero/hero";
 // import Footer from "../components/footer/footer";
 import AddNewItem from "../components/addNewItem/addNewItem";
-import AddNewCategory from "../components/addNewCategory/addNewCategory";
 import AddQuantity from "../components/addquantity/addquantity";
 import SubQuantity from "../components/subtractquantity/subtractquantity";
-// import additempage from "./additempage";
+import App from "../components/inventorytable/inventorytable";
 import "./mainpage.css"
 
-function MainPage() {
+function LowPage() {
     return (
         <div>
             <Hero />
             <div className="container mainContain">
+                <h1 className="is-size-1">Low Inventory</h1>
+                <hr />
                 <div className="columns">
-                    <div className="column is-5">
-                        <h1 className="is-size-3">Welcome, what would you like to do?</h1>
+                    <div className="column is-6">
+                        <App />
                     </div>
-                    <div className="column is-2">
-                        <ViewInventory />
-                        <LowInventory />
+                    <div className="column is-3">
                         <AddQuantity />
+                        <SubQuantity />
                     </div>
                     <div className="column is-3">
                         <AddNewItem />
-                        <AddNewCategory />
-                        <SubQuantity />
+                        <BackButton />
                     </div>
-                    <div className="colmun is-2"></div>
                 </div>
             </div>
-            {/* <Footer /> */}
         </div>
-    );
+    )
 }
 
-export default MainPage;
+export default LowPage;
