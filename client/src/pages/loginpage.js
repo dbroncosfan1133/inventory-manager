@@ -11,22 +11,30 @@ import SubQuantity from "../components/subtractquantity/subtractquantity";
 import "./mainpage.css"
 import LoginEmail from "../components/loginemail/loginemail";
 import LoginPass from "../components/loginpass/loginpass";
+import LoginButton from "../components/loginButton/loginButton";
 
 function Login() {
     return (
         <div>
             <Hero />
             <div className="container mainContain">
+            
                 <div className="columns">
-                    <div className="column is-5">
-                        <h1 className="is-size-3">Please Login</h1>
-                    </div>
-                    <div className="column is-5">
+                    <div className="column"></div>
+                    <div className="column is-4">
                         <LoginEmail />
                         <LoginPass />
                     </div>
-                    <div className="colmun is-2"></div>
+                    <div className="column"></div>
                 </div>
+                <div className="columns">
+                <div className="column is-7"></div>
+                <div className="column">
+                        <LoginButton />
+                    </div>
+                    <div className="column"></div>
+                </div>
+                
             </div>
             <Footer />
         </div>

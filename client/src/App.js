@@ -14,10 +14,11 @@ import Login from "./pages/loginpage";
 
 import './App.css';
 
+
  function App() {
   return (
     <Router>
-      <div>
+      <div className="container">
         <Switch>
           <Route exact path="/" component={MainPage} />
           <Route exact path="/viewinventory" component={InventoryPage} />
