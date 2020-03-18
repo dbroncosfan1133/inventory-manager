@@ -4,16 +4,18 @@ import React from "react";
 
 export function Input(props) {
   return (
-    <div className="form-group">
-      <input className="form-control" {...props} />
+    <div className="field">
+      <div className="control">
+        <input className="input is-info" type="text" {...props} />
+      </div>
     </div>
   );
 }
 
 export function FormBtn(props) {
   return (
-    <button {...props} className="button is-link is-medium">
-      {props.children}
-    </button>
+    <div className="buttons">
+      <button {...props} className="button is-link is-large">{props.children}</button>
+    </div>
   );
 }
