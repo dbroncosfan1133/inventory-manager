@@ -1,3 +1,12 @@
+html { 
+  background: url(./backgroud.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +44,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.container {
+  min-height: 90vh;
 }
