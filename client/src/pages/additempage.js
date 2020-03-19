@@ -1,111 +1,120 @@
 import React, { Component } from "react";
+import HeroMain from "../components/heromain/heromain";
 import { Input, FormBtn } from "../components/form/form";
+import BackButton from "../components/backbutton/backbutton";
 
 class AddNewItem extends Component {
-    state = {
-        items: [],
-        description: "",
-        itemNumber: "",
-        quantity: "",
-        size: "",
-        cost: "",
-        salePrice: ""
-    };
+  state = {
+    items: [],
+    description: "",
+    itemNumber: "",
+    quantity: "",
+    size: "",
+    cost: "",
+    salePrice: ""
+  };
 
-    ////////////////////////////// Need API calls to Database//////////////////////////////
-    // componentDidMount() {
-    //     this.loadItems();
-    //   }
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
 
-    //   loadItems = () => {
-    //     API.getItems()
-    //       .then(res =>
-    //         this.setState({ items: res.data, description: "", itemNumber: "", quantity: "",
-    //                         size: "", cost: "", salePrice: "" })
-    //       )
-    //       .catch(err => console.log(err));
-    //   };
+  // handleFormSubmit = event => {
+  //     event.preventDefault();
+  //     if (this.state.description && this.state.itemNumber && this.state.quantity && this.state.cost && this.state.salePrice) {
+  //         API.??????????({
+  //             description: this.state.description,
+  //             itemNumber: this.state.itemNumber,
+  //             quantity: this.state.quantity,
+  //             size: this.state.size,
+  //             cost: this.state.cost,
+  //             salePrice: this.state.salePrice
+  //         })
+  //             .then(res => this.loadItems())
+  //             .catch(err => console.log(err));
+  //     }
+  // };
 
-    // handleInputChange = event => {
-    //     const { name, value } = event.target;
-    //     this.setState({
-    //         [name]: value
-    //     });
-    // };
-
-    // handleFormSubmit = event => {
-    //     event.preventDefault();
-    //     if (this.state.title && this.state.author) {
-    //         API.saveBook({
-    //             description: this.state.description,
-    //             itemNumber: this.state.itemNumber,
-    //             quantity: this.state.quantity,
-    //             size: this.state.size,
-    //             cost: this.state.cost,
-    //             salePrice: this.state.salePrice
-    //         })
-    //             .then(res => this.loadItems())
-    //             .catch(err => console.log(err));
-    //     }
-    // };
-
-    render() {
-        return (
-            <div className="container">
-                <div className="header">
-                    <h1>Enter a New Product</h1>
-                </div>
+  render() {
+    return (
+      <div>
+        <HeroMain />
+        <div>
+          <br />
+          <div className="container">
+            <div className="card">
+              <div className="card-title">
+                <h1 className="is-size-2">Enter a New Product</h1>
                 <hr />
-                <div>
-                    <form>
-                        <Input
-                            value={this.state.description}
-                            onChange={this.handleInputChange}
-                            name="description"
-                            placeholder="Item Description (required)"
-                        />
-                        <Input
-                            value={this.state.itemNumber}
-                            onChange={this.handleInputChange}
-                            name="itemNumber"
-                            placeholder="Item Number (required)"
-                        />
-                        <Input
-                            value={this.state.quantity}
-                            onChange={this.handleInputChange}
-                            name="quantity"
-                            placeholder="Quantity on hand (required)"
-                        />
-                        <Input
-                            value={this.state.size}
-                            onChange={this.handleInputChange}
-                            name="size"
-                            placeholder="Size"
-                        />
-                        <Input
-                            value={this.state.cost}
-                            onChange={this.handleInputChange}
-                            name="cost"
-                            placeholder="Cost (required)"
-                        />
-                        <Input
-                            value={this.state.salePrice}
-                            onChange={this.handleInputChange}
-                            name="salePrice"
-                            placeholder="Sale Price (required)"
-                        />
-                        <FormBtn
-                            disabled={!(this.state.description && this.state.itemNumber
-                                && this.state.quantity && this.state.cost && this.state.salePrice)}
-                            onClick={this.handleFormSubmit}
-                        >
-                            Submit Item
-                        </FormBtn>
-                    </form>
-                </div>
+              </div>
+              <div className="card-body">
+                <form>
+                  <h1 className="is-size-5">Item Description:</h1>
+                  <Input
+                    value={this.state.description}
+                    onChange={this.handleInputChange}
+                    name="description"
+                    placeholder="Item Description (required)"
+                  />
+                  <h1 className="is-size-5">Item Number:</h1>
+                  <Input
+                    value={this.state.itemNumber}
+                    onChange={this.handleInputChange}
+                    name="itemNumber"
+                    placeholder="Item Number (required)"
+                  />
+                  <h1 className="is-size-5">Quantity:</h1>
+                  <Input
+                    value={this.state.quantity}
+                    onChange={this.handleInputChange}
+                    name="quantity"
+                    placeholder="Quantity on hand (required)"
+                  />
+                  <h1 className="is-size-5">Size:</h1>
+                  <Input
+                    value={this.state.size}
+                    onChange={this.handleInputChange}
+                    name="size"
+                    placeholder="Size"
+                  />
+                  <h1 className="is-size-5">Cost:</h1>
+                  <Input
+                    value={this.state.cost}
+                    onChange={this.handleInputChange}
+                    name="cost"
+                    placeholder="Cost (required)"
+                  />
+                  <h1 className="is-size-5">Sale Price:</h1>
+                  <Input
+                    value={this.state.salePrice}
+                    onChange={this.handleInputChange}
+                    name="salePrice"
+                    placeholder="Sale Price (required)"
+                  />
+                  <div className="field is-grouped">
+                    <p className="control">
+                      <FormBtn
+                        disabled={!(this.state.description && this.state.itemNumber
+                          && this.state.quantity && this.state.cost && this.state.salePrice)}
+                        onClick={this.handleFormSubmit}
+                      >
+                        Submit Item
+                      </FormBtn>
+                    </p>
+                    <p className="control">
+                      <BackButton />
+                    </p>
+                  </div>
+                </form>
+              </div>
             </div>
-        )
-    }
+          </div>
+        </div>
+      </div>
+    )
+  }
 }
 
 export default AddNewItem;
