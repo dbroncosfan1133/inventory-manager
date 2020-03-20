@@ -6,6 +6,7 @@ import AddItemBtn from "../components/additembtn/additembtn";
 import AddInventBtn from "../components/addinventorybtn/addinventbtn";
 import SubInventBtn from "../components/subinventbtn/subinventbtn";
 import App from "../components/inventorytable/inventorytable";
+import Footer from "../components/footer/footer";
 import "./pages.css"
 
 function LowPage() {
@@ -49,6 +50,7 @@ function LowPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

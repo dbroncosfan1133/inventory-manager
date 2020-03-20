@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import HeroMain from "../components/heromain/heromain";
 import { Input, FormBtn } from "../components/form/form";
 import BackButton from "../components/backbutton/backbutton";
+import Footer from "../components/footer/footer";
 
 class AddNewCategory extends Component {
   state = {
@@ -71,6 +72,7 @@ class AddNewCategory extends Component {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     )
   }

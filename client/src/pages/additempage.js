@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import HeroMain from "../components/heromain/heromain";
 import { Input, FormBtn } from "../components/form/form";
 import BackButton from "../components/backbutton/backbutton";
+import Footer from "../components/footer/footer";
 
 class AddNewItem extends Component {
   state = {
@@ -112,6 +113,7 @@ class AddNewItem extends Component {
             </div>
           </div>
         </div>
+       <Footer />
       </div>
     )
   }

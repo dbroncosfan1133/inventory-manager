@@ -1,7 +1,7 @@
 import React from "react";
 import BackButton from "../components/backbutton/backbutton";
 import HeroMain from "../components/heromain/heromain";
-// import Footer from "../components/footer/footer";
+import Footer from "../components/footer/footer";
 import AddItemBtn from "../components/additembtn/additembtn";
 import AddInventBtn from "../components/addinventorybtn/addinventbtn";
 import SubInventBtn from "../components/subinventbtn/subinventbtn";
@@ -49,6 +49,7 @@ function InventoryPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

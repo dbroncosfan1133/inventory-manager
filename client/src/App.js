@@ -9,13 +9,13 @@ import Login from "./pages/loginpage";
 import AddNewItem from "./pages/additempage";
 import AddCategoryPage from "./pages/addcategorypage";
 
+
 import './App.css';
 
 
 function App() {
   return (
     <Router>
-      <div className="container">
         <Switch>
           <Route exact path="/mainpage" component={MainPage} />
           <Route exact path="/viewinventory" component={InventoryPage} />
@@ -26,7 +26,6 @@ function App() {
           <Route exact path="/subtract" component={SubPage} />
           <Route exact path="/login" component={Login} />
         </Switch>
-      </div>
     </Router>
   )
 }
