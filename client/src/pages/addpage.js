@@ -2,6 +2,7 @@ import React from "react";
 import BackButton from "../components/backbutton/backbutton";
 import { Input, FormBtn } from "../components/form/form";
 import HeroMain from "../components/heromain/heromain";
+import Footer from "../components/footer/footer";
 import "./pages.css"
 
 class AddPage extends React.Component {
@@ -76,6 +77,7 @@ class AddPage extends React.Component {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     )
   }

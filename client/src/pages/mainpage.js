@@ -2,7 +2,7 @@ import React from "react";
 import ViewInventory from "../components/viewbtn/viewButton";
 import LowInventoryBtn from "../components/lowinventorybtn/lowInventoryBtn";
 import HeroMain from "../components/heromain/heromain";
-// import Footer from "../components/footer/footer";
+import Footer from "../components/footer/footer";
 import AddItemBtn from "../components/additembtn/additembtn";
 import AddCategoryBtn from "../components/addcategorybtn/addcategorybtn";
 import AddInventBtn from "../components/addinventorybtn/addinventbtn";
@@ -35,7 +35,7 @@ function MainPage() {
                     <div className="colmun is-2"></div>
                 </div>
             </div>
-            {/* <Footer /> */}
+            <Footer />
         </div>
     );
 }
