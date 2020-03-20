@@ -18,7 +18,7 @@ const Strategy = new LocalStrategy({
                 });
             }
             if (!userMatch.checkPassword(password)) {
-                return done(null, false {
+                return done(null, false, {
                     message: 'Incorrect password'
                 });
             }
