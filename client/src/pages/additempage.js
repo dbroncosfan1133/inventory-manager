@@ -6,12 +6,14 @@ import BackButton from "../components/backbutton/backbutton";
 class AddNewItem extends Component {
   state = {
     items: [],
-    description: "",
     itemNumber: "",
     quantity: "",
+    description: "",
     size: "",
-    cost: "",
-    salePrice: ""
+    upcCode: "",
+    salonEach: "",
+    extended: "",
+    category: ""
   };
 
   handleInputChange = event => {
@@ -51,53 +53,68 @@ class AddNewItem extends Component {
               </div>
               <div className="card-body">
                 <form>
-                  <h1 className="is-size-5">Item Description:</h1>
-                  <Input
-                    value={this.state.description}
-                    onChange={this.handleInputChange}
-                    name="description"
-                    placeholder="Item Description (required)"
-                  />
-                  <h1 className="is-size-5">Item Number:</h1>
+                  <h1 className="is-size-6">Item Number:</h1>
                   <Input
                     value={this.state.itemNumber}
                     onChange={this.handleInputChange}
                     name="itemNumber"
                     placeholder="Item Number (required)"
                   />
-                  <h1 className="is-size-5">Quantity:</h1>
+                  <h1 className="is-size-6">Quantity:</h1>
                   <Input
                     value={this.state.quantity}
                     onChange={this.handleInputChange}
                     name="quantity"
-                    placeholder="Quantity on hand (required)"
+                    placeholder="Quantity(required)"
                   />
-                  <h1 className="is-size-5">Size:</h1>
+                  <h1 className="is-size-6">Description:</h1>
+                  <Input
+                    value={this.state.description}
+                    onChange={this.handleInputChange}
+                    name="description"
+                    placeholder="Description (required)"
+                  />
+                  <h1 className="is-size-6">Size:</h1>
                   <Input
                     value={this.state.size}
                     onChange={this.handleInputChange}
                     name="size"
-                    placeholder="Size"
+                    placeholder="Size (required)"
                   />
-                  <h1 className="is-size-5">Cost:</h1>
+                  <h1 className="is-size-6">UPC Code:</h1>
                   <Input
-                    value={this.state.cost}
+                    value={this.state.upcCode}
                     onChange={this.handleInputChange}
-                    name="cost"
-                    placeholder="Cost (required)"
+                    name="upcCode"
+                    placeholder="UPC Code (required)"
                   />
-                  <h1 className="is-size-5">Sale Price:</h1>
+                  <h1 className="is-size-6">Sale Price:</h1>
                   <Input
-                    value={this.state.salePrice}
+                    value={this.state.salonEach}
                     onChange={this.handleInputChange}
-                    name="salePrice"
-                    placeholder="Sale Price (required)"
+                    name="salonEach"
+                    placeholder="Salon Each (required)"
+                  />
+                  <h1 className="is-size-6">Extended:</h1>
+                  <Input
+                    value={this.state.extended}
+                    onChange={this.handleInputChange}
+                    name="extended"
+                    placeholder="Extended (required)"
+                  />
+                  <h1 className="is-size-6">Category:</h1>
+                  <Input
+                    value={this.state.category}
+                    onChange={this.handleInputChange}
+                    name="category"
+                    placeholder="Category (required)"
                   />
                   <div className="field is-grouped">
                     <p className="control">
                       <FormBtn
-                        disabled={!(this.state.description && this.state.itemNumber
-                          && this.state.quantity && this.state.cost && this.state.salePrice)}
+                        disabled={!(this.state.itemNumber && this.state.quantity
+                          && this.state.description && this.state.size && this.state.upcCode
+                          && this.state.salonEach && this.state.extended && this.state.category)}
                         onClick={this.handleFormSubmit}
                       >
                         Submit Item
