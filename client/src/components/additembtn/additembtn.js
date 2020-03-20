@@ -1,19 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-class AddQuantity extends React.Component {
+class AddItemBtn extends React.Component {
     handleClick() {
         console.log('Clicked');
     }
     render() {
         return (
             <div className="buttons">
-                <Link to={"/add"}>
-                    <button className="button is-success is-large" onClick={this.handleClick.bind(this)}>Add Quantity</button>
+                <Link to={"/additempage"}>
+                    <button className="button is-link is-large" onClick={this.handleClick.bind(this)}>Add Item</button>
                 </Link>
             </div>
         )
     }
 }
 
-export default AddQuantity;
+export default AddItemBtn;

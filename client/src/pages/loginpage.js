@@ -1,14 +1,7 @@
 import React from "react";
-import ViewInventory from "../components/viewbtn/viewButton";
-import LowInventory from "../components/lowinventory/lowInventoryBtn";
-import Hero from "../components/hero/hero";
+import HeroLogin from "../components/herologin/herologin";
 import Footer from "../components/footer/footer";
-import AddNewItem from "../components/addNewItem/addNewItem";
-import AddNewCategory from "../components/addNewCategory/addNewCategory";
-import AddQuantity from "../components/addquantity/addquantity";
-import SubQuantity from "../components/subtractquantity/subtractquantity";
-// import additempage from "./additempage";
-import "./mainpage.css"
+import "./pages.css"
 import LoginEmail from "../components/loginemail/loginemail";
 import LoginPass from "../components/loginpass/loginpass";
 import LoginButton from "../components/loginButton/loginButton";
@@ -16,7 +9,7 @@ import LoginButton from "../components/loginButton/loginButton";
 function Login() {
     return (
         <div>
-            <Hero />
+            <HeroLogin />
             <div className="container mainContain">
             
                 <div className="columns">
