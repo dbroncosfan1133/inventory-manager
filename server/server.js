@@ -13,7 +13,7 @@ const routes = require("./routes");
 // var axios = require("axios");
 // var cheerio = require("cheerio");
 
-// Require all models
+// Require in the db connection URL
 var db = require("./db/index");
 
 var PORT = process.env.PORT || 3001;
@@ -34,7 +34,7 @@ app.use(express.static("public"));
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(db.MONGO_ATLAS_URL || "mongodb://localhost/inventorymanager", {
+mongoose.connect(db.MONGO_ATLAS_URL, {
     useNewUrlParser: true
 })
 .then(() => console.log('Connected to MongoDB'))
