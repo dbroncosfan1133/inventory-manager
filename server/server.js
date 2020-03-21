@@ -13,7 +13,7 @@ var axios = require("axios");
 var cheerio = require("cheerio");
 
 // Require all models
-var db = require("./models");
+var db = require("./db");
 
 var PORT = process.env.PORT || 3000;
 
@@ -33,7 +33,7 @@ app.use(express.static("public"));
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/inventorymanager", {
+mongoose.connect(process.env.MONGODB_URI ||"mongodb://localhost/inventorymanager", {
     useNewUrlParser: true
 });
 
