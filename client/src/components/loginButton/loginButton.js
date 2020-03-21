@@ -1,13 +1,22 @@
 import React from "react";
 import "./loginButton.css";
+import { Link } from "react-router-dom";
 
 
-function Login (props) {
-    return (
-        <div className="buttons">
-            <button className="button is-link is-large has-background-black-bis" {...props}>Login</button>
-        </div>
-    );
+class Login extends React.Component {
+    handleClick() {
+        console.log('Clicked');
+    }
+    render() {
+        return (
+            <div className="buttons">
+                <Link to={"/mainpage"}>
+                    <button className="button is-large has-background-black-bis" onClick={this.handleClick.bind(this)}>Login</button>
+                </Link>
+            </div>
+        )
+    }
 }
+
 
 export default Login;

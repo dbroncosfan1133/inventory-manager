@@ -6,7 +6,8 @@ function HeroLogin() {
             <div className="hero-body">
                 <div className="navbar">
                     <div className="navbar-brand">
-                        <h1 className="navbar-item title">Inventory Manager</h1>
+                        <h1 className="navbar-item title">Inventory Manager</h1> 
+                        {/* logo needs to go here */}
                     </div>
                 </div>
             </div>
