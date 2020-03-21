@@ -3,7 +3,7 @@ require("dotenv").config();
 var express = require("express");
 var logger = require("morgan");
 var mongoose = require("mongoose");
-var passport = require("./config/passport");
+var passport = require("./passport");
 const routes = require("./routes");
 
 
