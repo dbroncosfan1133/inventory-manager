@@ -46,7 +46,7 @@ function setPrice(num){
 }
 
 // This creates our model from the above schema, using mongoose's model method
-var Product = mongoose.model("Users", ProductSchema);
+var Product = mongoose.model("Product", ProductSchema);
 
 // Export the User model
 module.exports = Product;

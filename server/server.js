@@ -9,13 +9,14 @@ const routes = require("./routes");
 
 // Axios is a promised-based http library, similar to jQuery's Ajax method
 // It works on the client and on the server
-var axios = require("axios");
-var cheerio = require("cheerio");
+
+// var axios = require("axios");
+// var cheerio = require("cheerio");
 
 // Require all models
-var db = require("./db");
+var db = require("./db/index");
 
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3001;
 
 // Initialize Express
 var app = express();
@@ -33,9 +34,11 @@ app.use(express.static("public"));
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI ||"mongodb://localhost/inventorymanager", {
+mongoose.connect(db.MONGO_ATLAS_URL || "mongodb://localhost/inventorymanager", {
     useNewUrlParser: true
-});
+})
+.then(() => console.log('Connected to MongoDB'))
+.catch(err => console.log(`Error connecting to database: ${err}`));
 
 // Start the server
 app.listen(PORT, function () {
