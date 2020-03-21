@@ -1,10 +1,15 @@
 import React from "react";
+import "./footer.css";
 
 function Footer() {
     return (
-        <div className="hero is-dark is-bold">
-            <div className="hero-body"></div>
-        </div>
+        <footer className="footer">
+            <div className="content has-text-centered">
+                <p>
+                    <strong>Inventroy Manager</strong> by Curtis Allen, Stephen Green, Trevor Burningham, Kellie Hunsaker.
+                </p>
+            </div>
+        </footer>
     );
 }
 
