@@ -1,9 +1,10 @@
 .addQ {
-    background-color:  #EAC67A;
+    background-color:  #CF9F51;
     color: white;
+    border-color: #CF9F51;
 }
 
 .addQ:hover {
     color: #233237;
-    border-color: #eac67a;
+    border-color: #CF9F51;
 }
