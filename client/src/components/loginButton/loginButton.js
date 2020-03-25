@@ -11,7 +11,7 @@ class Login extends React.Component {
         return (
             <div className="buttons">
                 <Link to={"/mainpage"}>
-                    <button className="button is-large has-background-black-bis" onClick={this.handleClick.bind(this)}>Login</button>
+                    <button className="button login is-large" onClick={this.handleClick.bind(this)}>Login</button>
                 </Link>
             </div>
         )

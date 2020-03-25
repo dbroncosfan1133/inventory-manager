@@ -1,0 +1,10 @@
+.add {
+    background-color:  #223237;
+    color: white;
+    border-color: #223237;
+}
+
+.add:hover {
+    color: #eac67a;
+    border-color: #eac67a;
+}

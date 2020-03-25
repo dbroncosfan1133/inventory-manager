@@ -1,0 +1,9 @@
+.low {
+    background-color: #223237;
+    border-color: #223237;
+    color: white;
+}
+.low:hover {
+    color: #eac67a;
+    border-color: #eac67a;
+}

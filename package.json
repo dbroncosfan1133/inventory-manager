@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/dbroncosfan1133/inventory-manager/issues"
   },
-  "homepage": "https://github.com/dbroncosfan1133/inventory-manager#readme",
+  "homepage": "https://localhost:3000/login",
   "dependencies": {
     "axios": "^0.19.2",
     "express": "^4.17.1",

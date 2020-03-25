@@ -1,0 +1,8 @@
+.view {
+    background-color: #223237;
+    color: white;
+}
+.view:hover {
+    color: #eac67a;
+    border-color: #eac67a;
+}

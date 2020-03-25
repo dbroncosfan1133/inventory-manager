@@ -1,3 +1,10 @@
-.button {
-color: rgb(143, 141, 138);
+.login {
+color: white;
+background-color: #eac67a;
+border-color: #eac67a;
 };
+
+.login:hover {
+    color: #233237;
+    border-color: #eac67a;
+}
