@@ -1,0 +1,9 @@
+.addQ {
+    background-color:  #EAC67A;
+    color: white;
+}
+
+.addQ:hover {
+    color: #233237;
+    border-color: #eac67a;
+}

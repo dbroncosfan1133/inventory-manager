@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./backbutton.css";
 
 class BackButton extends React.Component {
     handleClick() {
@@ -9,7 +10,7 @@ class BackButton extends React.Component {
         return (
             <div className="buttons">
                 <Link to={"/mainpage"}>
-                    <button className="button is-danger is-large" onClick={this.handleClick.bind(this)}>Go Back</button>
+                    <button className="button back is-large" onClick={this.handleClick.bind(this)}>Go Back</button>
                 </Link>
             </div>
         )

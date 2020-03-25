@@ -1,0 +1,10 @@
+.sub {
+    background-color: #984b43;
+    color: white;
+    border-color: #984b43;
+}
+
+.sub:hover {
+    color: #233237;
+    border-color: #984b43;
+}

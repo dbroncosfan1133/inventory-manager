@@ -6,7 +6,7 @@ function Footer() {
         <footer className="footer">
             <div className="content has-text-centered">
                 <p>
-                    <strong>Inventroy Manager</strong> by Curtis Allen, Stephen Green, Trevor Burningham, Kellie Hunsaker.
+                    <strong className = "footerName">Inventory Manager</strong> by Curtis Allen, Stephen Green, Trevor Burningham, Kellie Hunsaker.
                 </p>
             </div>
         </footer>

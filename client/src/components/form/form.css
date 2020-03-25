@@ -1,0 +1,28 @@
+.formBtn {
+    background-color: #984b43;
+    color: white;
+    border-color: #984b43;
+}
+
+.formBtn:hover {
+    color: #233237;
+    border-color: #984b43;
+}
+
+.formBtn:disabled {
+    color: white;
+    border-color: #984b43;
+    background-color: #984b43;
+    opacity: 50%;
+}
+
+.outline {
+    border-color: #233237;;
+    border-radius: 4px;
+
+}
+
+.outline:focus {
+    border-color: #233237;
+    box-shadow: #233237;
+}

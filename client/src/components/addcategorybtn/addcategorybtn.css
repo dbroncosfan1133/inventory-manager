@@ -1,0 +1,10 @@
+.cat {
+    background-color:  #223237;
+    border-color: #223237;
+    color: white;
+}
+
+.cat:hover {
+    color: #eac67a;
+    border-color: #eac67a;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import "./form.css";
 
 // This file exports the Input, TextArea, and FormBtn components
 
@@ -6,7 +7,7 @@ export function Input(props) {
   return (
     <div className="field">
       <div className="control">
-        <input className="input is-info" type="text" {...props} />
+        <input className="input outline" type="text" {...props} />
       </div>
     </div>
   );
@@ -15,7 +16,7 @@ export function Input(props) {
 export function FormBtn(props) {
   return (
     <div className="buttons">
-      <button {...props} className="button is-link is-large">{props.children}</button>
+      <button {...props} className="button formBtn is-large">{props.children}</button>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./addcategorybtn.css";
 
 class AddCategoryBtn extends React.Component {
     handleClick() {
@@ -9,7 +10,7 @@ class AddCategoryBtn extends React.Component {
         return (
             <div className="buttons">
                 <Link to={"/addnewcategory"}>
-                    <button className="button is-link is-large" onClick={this.handleClick.bind(this)}>Add Category</button>
+                    <button className="button cat is-large" onClick={this.handleClick.bind(this)}>Add Category</button>
                 </Link>
             </div>
         )

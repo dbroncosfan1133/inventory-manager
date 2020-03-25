@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./subinventory.css";
 
 class SubInventBtn extends React.Component {
     handleClick() {
@@ -9,7 +10,7 @@ class SubInventBtn extends React.Component {
         return (
             <div className="buttons">
                 <Link to={"/subtract"}>
-                    <button className="button is-warning is-large" onClick={this.handleClick.bind(this)}>Sub Quantity</button>
+                    <button className="button sub is-large" onClick={this.handleClick.bind(this)}>Sub Quantity</button>
                 </Link>
             </div>
         )

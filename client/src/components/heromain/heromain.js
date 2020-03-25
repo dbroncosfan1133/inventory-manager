@@ -1,9 +1,10 @@
 import React from "react";
 import LogoutBtn from "../logoutbtn/logoutbtn"
+import "./heromain.css";
 
 function HeroMain() {
     return (
-        <div className="hero is-dark is-bold is-small">
+        <div className="hero header is-small">
             <div className="hero-body">
                 <div className="navbar">
                     <div className="navbar-brand">
