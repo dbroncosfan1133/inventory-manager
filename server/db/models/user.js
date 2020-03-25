@@ -2,7 +2,7 @@ var mongoose = require("mongoose");
 
 // Save a reference to the Schema constructor
 var Schema = mongoose.Schema;
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcrypt');
 mongoose.promise = Promise;
 
 // Using the Schema constructor, create a new UserSchema object

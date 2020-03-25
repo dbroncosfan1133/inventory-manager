@@ -3,19 +3,20 @@ require("dotenv").config();
 var express = require("express");
 var logger = require("morgan");
 var mongoose = require("mongoose");
-var passport = require("./config/passport");
+var passport = require("./passport");
 const routes = require("./routes");
 
 
 // Axios is a promised-based http library, similar to jQuery's Ajax method
 // It works on the client and on the server
-var axios = require("axios");
-var cheerio = require("cheerio");
 
-// Require all models
-var db = require("./models");
+// var axios = require("axios");
+// var cheerio = require("cheerio");
 
-var PORT = process.env.PORT || 3000;
+// Require in the db connection URL
+var db = require("./db/index");
+
+var PORT = process.env.PORT || 3001;
 
 // Initialize Express
 var app = express();
@@ -33,9 +34,11 @@ app.use(express.static("public"));
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/inventorymanager", {
+mongoose.connect(db.MONGO_ATLAS_URL, {
     useNewUrlParser: true
-});
+})
+.then(() => console.log('Connected to MongoDB'))
+.catch(err => console.log(`Error connecting to database: ${err}`));
 
 // Start the server
 app.listen(PORT, function () {

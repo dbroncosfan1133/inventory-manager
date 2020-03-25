@@ -2,10 +2,31 @@
   "name": "inventory-manager",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "./server/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bcrypt": "^4.0.1",
+    "concurrently": "^5.1.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.9.5",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-google-oauth": "^2.0.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   },
   "repository": {
     "type": "git",
@@ -16,11 +37,6 @@
   "bugs": {
     "url": "https://github.com/dbroncosfan1133/inventory-manager/issues"
   },
-  "homepage": "https://localhost:3000/login",
-  "dependencies": {
-    "axios": "^0.19.2",
-    "express": "^4.17.1",
-    "mongoose": "^5.9.5",
-    "passport": "^0.4.1"
-  }
+
+  "homepage": "https://github.com/dbroncosfan1133/inventory-manager#readme"
 }

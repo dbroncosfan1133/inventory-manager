@@ -3,36 +3,39 @@ var mongoose = require("mongoose");
 // Save a reference to the Schema constructor
 var Schema = mongoose.Schema;
 
-// Using the Schema constructor, create a new UserSchema object
+// Using the Schema constructor, create a new InventorySchema object
 // This is similar to a Sequelize model
-var ProductSchema = new Schema({
+var InventorySchema = new Schema({
   // `name` is required and of type String
-  itemNumber: {
+  "Item Number": {
     type: String,
     required: true
   },
   // `quantity` is required and of type Integer
-  quantity: {
+  Quantity: {
     type: Number,
   },
-  description: {
+  Description: {
       type: String,
       required: true
   },
-  size: {
+  Size: {
       type: String,
       required: true
   },
-  UPCCode: {
+  "UPC Code": {
       type: String,
   },
-  salonEach: {
-      type: Number,
+  "Salon Each": {
+      type: String,
       set: setPrice,
       get: getPrice,
       required: true
   },
-  category: {
+  Extended: {
+      type: String
+  },
+  Category: {
       type: String
   }
 });
@@ -46,7 +49,7 @@ function setPrice(num){
 }
 
 // This creates our model from the above schema, using mongoose's model method
-var Product = mongoose.model("Users", ProductSchema);
+var Inventory = mongoose.model("Inventory", InventorySchema);
 
-// Export the User model
-module.exports = Product;
+// Export the Inventory model
+module.exports = Inventory;
