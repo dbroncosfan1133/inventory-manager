@@ -2,13 +2,12 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 60px;
+    height: 80px;
     padding: 3px;
-    background-color: #233237;
-    color: white;
-    
+    background-color: #18121E;
+    color: #eac67a;
 }
 
 .footerName {
-    color: white;
+    color: #eac67a;
 }
