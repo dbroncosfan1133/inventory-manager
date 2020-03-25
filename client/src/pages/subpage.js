@@ -37,7 +37,7 @@ class SubPage extends React.Component {
         <HeroMain />
         <div className="container mainContain">
           <div className="columns">
-            <div className="column is-9">
+            <div className="column is-12">
               <div className="card">
                 <div className="card-title">
                   <h1 className="is-size-2">Subtract Inventory</h1>

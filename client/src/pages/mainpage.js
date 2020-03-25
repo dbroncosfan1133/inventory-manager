@@ -18,7 +18,7 @@ function MainPage() {
                     <div className="column is-6">
                         <div className="card">
                             <div className="card-body">
-                                <h1 className="is-size-3">Welcome, what would you like to do?</h1>
+                                <h1 className="welcome is-size-3">Welcome, what would you like to do?</h1>
                             </div>
                         </div>
                     </div>

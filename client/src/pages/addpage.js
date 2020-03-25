@@ -37,21 +37,21 @@ class AddPage extends React.Component {
         <HeroMain />
         <div className="container mainContain">
           <div className="columns">
-            <div className="column is-9">
+            <div className="column is-12">
               <div className="card">
                 <div className="card-title">
                   <h1 className="is-size-2">Add Inventory</h1>
                 </div>
                 <div className="card-body">
                   <form>
-                    <h1 className="is-size-5">Item Number:</h1>
+                    <h1 className="is-size-6">Item Number:</h1>
                     <Input
                       value={this.state.itemNumber}
                       onChange={this.handleInputChange}
                       name="itemNumber"
                       placeholder="Item Number (required)"
                     />
-                    <h1 className="is-size-5">Quantity Adding:</h1>
+                    <h1 className="is-size-6">Quantity Adding:</h1>
                     <Input
                       value={this.state.add}
                       onChange={this.handleInputChange}

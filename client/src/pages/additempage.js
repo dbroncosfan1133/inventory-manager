@@ -42,7 +42,7 @@ class AddNewItem extends Component {
 
   render() {
     return (
-      <div>
+      <div className="wrapper">
         <HeroMain />
         <div>
           <br />

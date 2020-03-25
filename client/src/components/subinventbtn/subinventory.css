@@ -1,10 +1,10 @@
 .sub {
-    background-color: #984b43;
+    background-color:  #CF9F51;
     color: white;
-    border-color: #984b43;
+    border-color: #CF9F51;
 }
 
 .sub:hover {
     color: #233237;
-    border-color: #984b43;
+    border-color: #CF9F51;
 }

@@ -1,10 +1,16 @@
-html { 
+html, body { 
   background: url(./backgroud.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+    margin-bottom: -100px;
+    padding-bottom: 100px;
 }
 
 .App {
