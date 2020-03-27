@@ -6,7 +6,16 @@ import AddItemBtn from "../components/additembtn/additembtn";
 import AddInventBtn from "../components/addinventorybtn/addinventbtn";
 import SubInventBtn from "../components/subinventbtn/subinventbtn";
 import App from "../components/inventorytable/inventorytable";
-import "./pages.css"
+import "./pages.css";
+import API from "../utils/API";
+
+function logInventory() {
+  API.getAllInventory()
+  .then(res => console.log(res.data))
+  .catch(err => console.log(err));
+};
+
+logInventory();
 
 function InventoryPage() {
   return (
