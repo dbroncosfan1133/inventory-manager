@@ -26,6 +26,7 @@ function App() {
           <Route exact path="/add" component={AddPage} />
           <Route exact path="/subtract" component={SubPage} />
           <Route exact path="/login" component={Login} />
+          <Route exact path="/" component={Login} />
         </Switch>
     </Router>
   )
