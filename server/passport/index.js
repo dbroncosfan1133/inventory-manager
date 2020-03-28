@@ -1,40 +1,12 @@
 // Require in necessary dependencies for setting up passport
-const passport = require('passport');
+// Create the local strategy using passport-local
+const LocalStrategy = require('passport-local').Strategy;
+// Require in Mongoose
 const mongoose = require('mongoose');
-const LocalStrategy = require('./localStrategy');
-// const GoogleStrategy = require('./googleStrategy');
+// Require in bcrypt
+const bcrypt = require('bcryptjs');
 // Bring in the user model
 const User = require('../db/models/user');
-
-// // Serialize the user
-// passport.serializeUser((user, done) => {
-//     console.log('=== Serialize ... called ===')
-//     console.log(user); // The entire user object
-//     console.log('-----------');
-//     done(null, {
-//         _id: user._id
-//     });
-// });
-
-// // Deserialize the user
-// passport.deserializeUser((id, done) => {
-//     console.log('Deserialize ... called')
-//     User.findOne({
-//             _id: id
-//         },
-//         'firstName lastName photos local.username',
-//         (err, user) => {
-//             console.log('=============== Deserialize user called =============== ');
-//             console.log(user);
-//             console.log('-----------------');
-//             done(null, user);
-//         }
-//     );
-// });
-
-// Register the Strategies
-// passport.use(LocalStrategy);
-// passport.use(GoogleStrategy);
 
 // Set up module.exports
 module.exports = function (passport) {
