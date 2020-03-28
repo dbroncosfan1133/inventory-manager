@@ -5,12 +5,12 @@ module.exports = {
             return next();
         }
         req.flash('error_msg', 'Please log in to view that resource');
-        res.redirect(''); // <-- Need to figure out the redirect path
+        res.redirect('/mainpage');
     },
     forwardAuthenticated: function (req, res, next) {
         if (!req.isAuthenticated()) {
             return next();
         }
-        res.redirect(''); // <-- Need to figure out the redirect path
+        res.redirect('/mainpage');
     }
 };

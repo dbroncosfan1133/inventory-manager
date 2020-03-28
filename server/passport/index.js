@@ -1,8 +1,6 @@
 // Require in necessary dependencies for setting up passport
 // Create the local strategy using passport-local
 const LocalStrategy = require('passport-local').Strategy;
-// Require in Mongoose
-const mongoose = require('mongoose');
 // Require in bcrypt
 const bcrypt = require('bcryptjs');
 // Bring in the user model
