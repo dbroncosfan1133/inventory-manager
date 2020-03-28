@@ -30,12 +30,17 @@ app.use(express.static("public"));
 app.use(routes);
 
 // Require in the db connection URL
-var db = require("./db/keys").MongoURI;
+const db = require("./db/keys").MongoURI;
 // Connect to the Mongo DB
+console.log(db);
 mongoose.connect(db, {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    dbName: "hair-salon"
 })
-.then(() => console.log('Connected to MongoDB'))
+.then(() => {
+    console.log('Connected to MongoDB')
+    }
+)
 .catch(err => console.log(`Error connecting to database: ${err}`));
 
 // Start the server

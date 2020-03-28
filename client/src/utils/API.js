@@ -3,7 +3,6 @@ import axios from "axios";
 export default {
   // Gets all inventory items
   getAllInventory: function() {
-    console.log("Get all inventory fired");
     return axios.get("/api/inventory");
   },
   // Gets the inventory item with the given id
