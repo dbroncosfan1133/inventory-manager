@@ -35,6 +35,8 @@ app.use(express.static("public"));
 // Use the routes folder
 app.use(routes);
 
+// Require in the db connection URL
+const db = require("./db/keys").MongoURI;
 // Connect to the Mongo DB
 mongoose.connect(db, {
         useNewUrlParser: true
@@ -57,7 +59,6 @@ app.use(passport.session());
 
 // Connect flash
 app.use(flash());
-
 
 // Start the server
 app.listen(PORT, function () {

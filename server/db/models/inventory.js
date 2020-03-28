@@ -28,8 +28,6 @@ var InventorySchema = new Schema({
   },
   "Salon Each": {
       type: String,
-      set: setPrice,
-      get: getPrice,
       required: true
   },
   Extended: {
@@ -38,6 +36,8 @@ var InventorySchema = new Schema({
   Category: {
       type: String
   }
+},{
+    collection: "inventory"
 });
 
 function getPrice(num){
@@ -49,7 +49,7 @@ function setPrice(num){
 }
 
 // This creates our model from the above schema, using mongoose's model method
-var Inventory = mongoose.model("Inventory", InventorySchema);
+var Inventory = mongoose.model("Inventory", InventorySchema, "inventories");
 
 // Export the Inventory model
 module.exports = Inventory;
