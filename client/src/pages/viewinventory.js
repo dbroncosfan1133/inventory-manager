@@ -5,17 +5,8 @@ import Footer from "../components/footer/footer";
 import AddItemBtn from "../components/additembtn/additembtn";
 import AddInventBtn from "../components/addinventorybtn/addinventbtn";
 import SubInventBtn from "../components/subinventbtn/subinventbtn";
-import App from "../components/inventorytable/inventorytable";
+import Inventorytbl from "../components/inventorytbl/inventorytbl";
 import "./pages.css";
-import API from "../utils/API";
-
-function logInventory() {
-  API.getAllInventory()
-  .then(res => console.log(res.data))
-  .catch(err => console.log(err));
-};
-
-logInventory();
 
 function InventoryPage() {
   return (
@@ -28,14 +19,12 @@ function InventoryPage() {
             <hr />
           </div>
           <div className="columns is-multiline">
-            <div className="column is-6">
-              <div className="section">
-                <div className="container">
-                  <App />
-                </div>
+            <div className="column is-8">
+              <div className="container">
+                <Inventorytbl />
               </div>
             </div>
-            <div className="column is-3">
+            <div className="column is-2">
               <div className="field is-grouped">
                 <p className="control">
                   <AddInventBtn />
@@ -44,7 +33,7 @@ function InventoryPage() {
                   <AddItemBtn />
                 </p>
               </div>
-              <div className="column is-3">
+              <div className="column is-2">
                 <div className="field is-grouped">
                   <p className="control">
                     <SubInventBtn />
