@@ -12,9 +12,6 @@ const routes = require("./routes");
 // var axios = require("axios");
 // var cheerio = require("cheerio");
 
-// Require in the db connection URL
-var db = require("./db/index");
-
 var PORT = process.env.PORT || 3001;
 
 // Initialize Express
@@ -32,11 +29,17 @@ app.use(express.static("public"));
 // Use the routes folder
 app.use(routes);
 
+// Require in the db connection URL
+const db = require("./db/keys").MongoURI;
 // Connect to the Mongo DB
-mongoose.connect(db.MONGO_ATLAS_URL, {
-    useNewUrlParser: true
+mongoose.connect(db, {
+    useNewUrlParser: true,
+    dbName: "hair-salon"
 })
-.then(() => console.log('Connected to MongoDB'))
+.then(() => {
+    console.log('Connected to MongoDB')
+    }
+)
 .catch(err => console.log(`Error connecting to database: ${err}`));
 
 // Start the server
