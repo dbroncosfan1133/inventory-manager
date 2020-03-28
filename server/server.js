@@ -32,7 +32,6 @@ app.use(routes);
 // Require in the db connection URL
 const db = require("./db/keys").MongoURI;
 // Connect to the Mongo DB
-console.log(db);
 mongoose.connect(db, {
     useNewUrlParser: true,
     dbName: "hair-salon"
