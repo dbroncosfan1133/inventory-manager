@@ -6,6 +6,10 @@ router.route("/")
   .get(inventoryController.findAll)
   .post(inventoryController.create);
 
+ // Matches with "/api/inventory/low" 
+router.route("/low")
+  .get(inventoryController.findLow)
+
 // Matches with "/api/inventory/:id"
 router
   .route("/:id")
