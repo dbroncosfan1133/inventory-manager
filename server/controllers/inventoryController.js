@@ -22,8 +22,16 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
+    const tempObj = {
+      "Item Number": req.body.itemNumber,
+      Quantity: req.body.quantity,
+      Description: req.body.description,
+      Size: req.body.size,
+      "Salon Each": req.body.salonEach,
+      Category: req.body.category
+    }
     db.Inventory
-      .create(req.body)
+      .create(tempObj)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
