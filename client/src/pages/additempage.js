@@ -1,19 +1,17 @@
 import React, { Component } from "react";
 import HeroMain from "../components/heromain/heromain";
 import { Input, FormBtn } from "../components/form/form";
+import API from "../utils/API";
 import BackButton from "../components/backbutton/backbutton";
 import Footer from "../components/footer/footer";
 
 class AddNewItem extends Component {
   state = {
-    items: [],
     itemNumber: "",
     quantity: "",
     description: "",
     size: "",
-    upcCode: "",
     salonEach: "",
-    extended: "",
     category: ""
   };
 
@@ -24,21 +22,20 @@ class AddNewItem extends Component {
     });
   };
 
-  // handleFormSubmit = event => {
-  //     event.preventDefault();
-  //     if (this.state.description && this.state.itemNumber && this.state.quantity && this.state.cost && this.state.salePrice) {
-  //         API.??????????({
-  //             description: this.state.description,
-  //             itemNumber: this.state.itemNumber,
-  //             quantity: this.state.quantity,
-  //             size: this.state.size,
-  //             cost: this.state.cost,
-  //             salePrice: this.state.salePrice
-  //         })
-  //             .then(res => this.loadItems())
-  //             .catch(err => console.log(err));
-  //     }
-  // };
+  handleFormSubmit = event => {
+    event.preventDefault();
+    if(this.state.itemNumber && this.state.quantity && this.state.description && this.state.size && this.state.salonEach){
+        API.saveInventory({
+          itemNumber: this.state.itemNumber,
+          quantity: this.state.quantity,
+          description: this.state.description,
+          size: this.state.size,
+          salonEach: this.state.salonEach,
+          category: this.state.category
+        })
+        .catch(err => console.log(err));
+      }
+  };
 
   render() {
     return (
@@ -82,40 +79,26 @@ class AddNewItem extends Component {
                     name="size"
                     placeholder="Size (required)"
                   />
-                  <h1 className="is-size-6">UPC Code:</h1>
-                  <Input
-                    value={this.state.upcCode}
-                    onChange={this.handleInputChange}
-                    name="upcCode"
-                    placeholder="UPC Code (required)"
-                  />
-                  <h1 className="is-size-6">Sale Price:</h1>
+                  <h1 className="is-size-6">Cost:</h1>
                   <Input
                     value={this.state.salonEach}
                     onChange={this.handleInputChange}
                     name="salonEach"
                     placeholder="Salon Each (required)"
                   />
-                  <h1 className="is-size-6">Extended:</h1>
-                  <Input
-                    value={this.state.extended}
-                    onChange={this.handleInputChange}
-                    name="extended"
-                    placeholder="Extended (required)"
-                  />
                   <h1 className="is-size-6">Category:</h1>
                   <Input
                     value={this.state.category}
                     onChange={this.handleInputChange}
                     name="category"
-                    placeholder="Category (required)"
+                    placeholder="Category"
                   />
                   <div className="field is-grouped">
                     <p className="control">
                       <FormBtn
                         disabled={!(this.state.itemNumber && this.state.quantity
-                          && this.state.description && this.state.size && this.state.upcCode
-                          && this.state.salonEach && this.state.extended && this.state.category)}
+                          && this.state.description && this.state.size
+                          && this.state.salonEach)}
                         onClick={this.handleFormSubmit}
                       >
                         Submit Item

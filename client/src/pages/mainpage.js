@@ -4,7 +4,7 @@ import LowInventoryBtn from "../components/lowinventorybtn/lowInventoryBtn";
 import HeroMain from "../components/heromain/heromain";
 import Footer from "../components/footer/footer";
 import AddItemBtn from "../components/additembtn/additembtn";
-import AddCategoryBtn from "../components/addcategorybtn/addcategorybtn";
+// import AddCategoryBtn from "../components/addcategorybtn/addcategorybtn";
 import AddInventBtn from "../components/addinventorybtn/addinventbtn";
 import SubInventBtn from "../components/subinventbtn/subinventbtn";
 import "./pages.css"
@@ -29,7 +29,7 @@ function MainPage() {
                     </div>
                     <div className="column is-2">
                         <AddItemBtn />
-                        <AddCategoryBtn />
+                        {/* <AddCategoryBtn /> */}
                         <SubInventBtn />
                     </div>
                     <div className="colmun is-2"></div>
