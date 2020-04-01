@@ -33,9 +33,21 @@ class AddNewItem extends Component {
           salonEach: this.state.salonEach,
           category: this.state.category
         })
+        .then(res => this.clearForm())
         .catch(err => console.log(err));
       }
   };
+
+  clearForm = () => {
+    this.setState({
+      itemNumber: "",
+      quantity: "",
+      description: "",
+      size: "",
+      salonEach: "",
+      category: ""
+    });
+  }
 
   render() {
     return (
