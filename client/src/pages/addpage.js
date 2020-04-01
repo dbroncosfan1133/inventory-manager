@@ -10,8 +10,9 @@ class AddPage extends React.Component {
   state = {
     inventory: [],
     itemNumber: "",
-    quantity: ""
+    add: ""
   };
+
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -21,11 +22,11 @@ class AddPage extends React.Component {
   };
 
     handleFormSubmit = event => {
-      event.preventDefault();
-      if (this.state.itemNumber && this.state.quantity) {
+      // event.preventDefault();
+      if (this.state.itemNumber && this.state.add) {
         API.addInventory({
-          itemNumber: this.state.itemNumber,
-          quantity: this.state.quantity
+          ItemNumber: this.state.ItemNumber,
+          add: this.state.add
         })
           .then(res => this.viewInventory())
           .catch(err => console.log(err));
@@ -56,7 +57,7 @@ class AddPage extends React.Component {
                     <Input
                       value={this.state.add}
                       onChange={this.handleInputChange}
-                      name="subtract"
+                      name="add"
                       placeholder="Quantity to Add (required)"
                     />
                     <div className="field is-grouped">
