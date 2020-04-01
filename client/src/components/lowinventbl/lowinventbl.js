@@ -28,7 +28,6 @@ class LowInventView extends React.Component {
                                 <th>Item Number</th>
                                 <th>Quantity</th>
                                 <th>Description</th>
-                                <th>Size</th>
                                 <th>Salon Each</th>
                             </tr>
                         </thead>
@@ -37,7 +36,6 @@ class LowInventView extends React.Component {
                                 <th>Item Number</th>
                                 <th>Quantity</th>
                                 <th>Description</th>
-                                <th>Size</th>
                                 <th>Salon Each</th>
                             </tr>
                         </tfoot>
@@ -60,13 +58,6 @@ class LowInventView extends React.Component {
                                 {this.state.lowInventory.map(invent => (
                                     <div className="is-size-6">
                                         {invent.Description}
-                                    </div>
-                                ))}
-                            </td>
-                            <td>
-                                {this.state.lowInventory.map(invent => (
-                                    <div className="is-size-6">
-                                        {invent.Size}
                                     </div>
                                 ))}
                             </td>

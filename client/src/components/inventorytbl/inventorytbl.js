@@ -29,7 +29,6 @@ class InventoryView extends React.Component {
                                 <th>Item Number</th>
                                 <th>Quantity</th>
                                 <th>Description</th>
-                                <th>Size</th>
                                 <th>Salon Each</th>
                             </tr>
                         </thead>
@@ -38,7 +37,6 @@ class InventoryView extends React.Component {
                                 <th>Item Number</th>
                                 <th>Quantity</th>
                                 <th>Description</th>
-                                <th>Size</th>
                                 <th>Salon Each</th>
                             </tr>
                         </tfoot>
@@ -61,13 +59,6 @@ class InventoryView extends React.Component {
                                 {this.state.currentInventory.map(invent => (
                                     <div className="is-size-6">
                                         {invent.Description}
-                                    </div>
-                                ))}
-                            </td>
-                            <td>
-                                {this.state.currentInventory.map(invent => (
-                                    <div className="is-size-6">
-                                        {invent.Size}
                                     </div>
                                 ))}
                             </td>

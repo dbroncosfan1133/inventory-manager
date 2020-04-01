@@ -10,7 +10,6 @@ class AddNewItem extends Component {
     itemNumber: "",
     quantity: "",
     description: "",
-    size: "",
     salonEach: "",
     category: ""
   };
@@ -24,12 +23,11 @@ class AddNewItem extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if(this.state.itemNumber && this.state.quantity && this.state.description && this.state.size && this.state.salonEach){
+    if(this.state.itemNumber && this.state.quantity && this.state.description && this.state.salonEach){
         API.saveInventory({
           itemNumber: this.state.itemNumber,
           quantity: this.state.quantity,
           description: this.state.description,
-          size: this.state.size,
           salonEach: this.state.salonEach,
           category: this.state.category
         })
@@ -43,7 +41,6 @@ class AddNewItem extends Component {
       itemNumber: "",
       quantity: "",
       description: "",
-      size: "",
       salonEach: "",
       category: ""
     });
@@ -84,13 +81,6 @@ class AddNewItem extends Component {
                     name="description"
                     placeholder="Description (required)"
                   />
-                  <h1 className="is-size-6">Size:</h1>
-                  <Input
-                    value={this.state.size}
-                    onChange={this.handleInputChange}
-                    name="size"
-                    placeholder="Size (required)"
-                  />
                   <h1 className="is-size-6">Cost:</h1>
                   <Input
                     value={this.state.salonEach}
@@ -109,8 +99,7 @@ class AddNewItem extends Component {
                     <p className="control">
                       <FormBtn
                         disabled={!(this.state.itemNumber && this.state.quantity
-                          && this.state.description && this.state.size
-                          && this.state.salonEach)}
+                          && this.state.description && this.state.salonEach)}
                         onClick={this.handleFormSubmit}
                       >
                         Submit Item
