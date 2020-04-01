@@ -19,5 +19,10 @@ export default {
   // Saves new item to the inventory database
   saveInventory: function(inventoryData) {
     return axios.post("/api/inventory", inventoryData);
+  },
+
+  addInventory: function(id) {
+    return axios.put("/api/inventory/" + id);
   }
 };
+

@@ -4,12 +4,13 @@ import { Input, FormBtn } from "../components/form/form";
 import HeroMain from "../components/heromain/heromain";
 import Footer from "../components/footer/footer";
 import "./pages.css"
+import API from "../utils/API"
 
 class AddPage extends React.Component {
   state = {
     inventory: [],
     itemNumber: "",
-    add: ""
+    quantity: ""
   };
 
   handleInputChange = event => {
@@ -19,17 +20,17 @@ class AddPage extends React.Component {
     });
   };
 
-  //   handleFormSubmit = event => {
-  //     event.preventDefault();
-  //     if (this.state.itemNumber && this.state.subtract) {
-  //       API.subtractQuantity({
-  //         itemNumber: this.state.itemNumber,
-  //         subtract: this.state.subtract
-  //       })
-  //         .then(res => this.viewInventory())
-  //         .catch(err => console.log(err));
-  //     }
-  //   };
+    handleFormSubmit = event => {
+      event.preventDefault();
+      if (this.state.itemNumber && this.state.quantity) {
+        API.addInventory({
+          itemNumber: this.state.itemNumber,
+          quantity: this.state.quantity
+        })
+          .then(res => this.viewInventory())
+          .catch(err => console.log(err));
+      }
+    };
 
   render() {
     return (

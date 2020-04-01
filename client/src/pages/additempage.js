@@ -27,7 +27,7 @@ class AddNewItem extends Component {
   // handleFormSubmit = event => {
   //     event.preventDefault();
   //     if (this.state.description && this.state.itemNumber && this.state.quantity && this.state.cost && this.state.salePrice) {
-  //         API.??????????({
+  //         API.({
   //             description: this.state.description,
   //             itemNumber: this.state.itemNumber,
   //             quantity: this.state.quantity,
@@ -66,7 +66,7 @@ class AddNewItem extends Component {
                     value={this.state.quantity}
                     onChange={this.handleInputChange}
                     name="quantity"
-                    placeholder="Quantity(required)"
+                    placeholder="Quantity (required)"
                   />
                   <h1 className="is-size-6">Description:</h1>
                   <Input
@@ -75,34 +75,34 @@ class AddNewItem extends Component {
                     name="description"
                     placeholder="Description (required)"
                   />
-                  <h1 className="is-size-6">Size:</h1>
+                  <h1 className="is-size-6">Size (mL):</h1>
                   <Input
                     value={this.state.size}
                     onChange={this.handleInputChange}
                     name="size"
                     placeholder="Size (required)"
                   />
-                  <h1 className="is-size-6">UPC Code:</h1>
+                  {/* <h1 className="is-size-6">UPC Code:</h1>
                   <Input
                     value={this.state.upcCode}
                     onChange={this.handleInputChange}
                     name="upcCode"
                     placeholder="UPC Code (required)"
-                  />
+                  /> */}
                   <h1 className="is-size-6">Sale Price:</h1>
                   <Input
                     value={this.state.salonEach}
                     onChange={this.handleInputChange}
                     name="salonEach"
-                    placeholder="Salon Each (required)"
+                    placeholder="Salon Price (required)"
                   />
-                  <h1 className="is-size-6">Extended:</h1>
+                  {/* <h1 className="is-size-6">Extended:</h1>
                   <Input
                     value={this.state.extended}
                     onChange={this.handleInputChange}
                     name="extended"
                     placeholder="Extended (required)"
-                  />
+                  /> */}
                   <h1 className="is-size-6">Category:</h1>
                   <Input
                     value={this.state.category}
@@ -114,8 +114,8 @@ class AddNewItem extends Component {
                     <p className="control">
                       <FormBtn
                         disabled={!(this.state.itemNumber && this.state.quantity
-                          && this.state.description && this.state.size && this.state.upcCode
-                          && this.state.salonEach && this.state.extended && this.state.category)}
+                          && this.state.description && this.state.size
+                          && this.state.salonEach && this.state.category)}
                         onClick={this.handleFormSubmit}
                       >
                         Submit Item

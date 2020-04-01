@@ -19,17 +19,21 @@ class SubPage extends React.Component {
     });
   };
 
-  //   handleFormSubmit = event => {
-  //     event.preventDefault();
-  //     if (this.state.itemNumber && this.state.subtract) {
-  //       API.subtractQuantity({
-  //         itemNumber: this.state.itemNumber,
-  //         subtract: this.state.subtract
-  //       })
-  //         .then(res => this.viewInventory())
-  //         .catch(err => console.log(err));
-  //     }
-  //   };
+  handleFormSubmit = event => {
+    event.preventDefault();
+    
+  }
+    // handleFormSubmit = event => {
+    //   event.preventDefault();
+    //   if (this.state.itemNumber && this.state.subtract) {
+    //     API.subtractQuantity({
+    //       itemNumber: this.state.itemNumber,
+    //       subtract: this.state.subtract
+    //     })
+    //       .then(res => this.viewInventory())
+    //       .catch(err => console.log(err));
+    //   }
+    // };
 
   render() {
     return (
@@ -51,12 +55,12 @@ class SubPage extends React.Component {
                       name="itemNumber"
                       placeholder="Item Number (required)"
                     />
-                    <h1 className="is-size-5">Quantity Subtracting:</h1>
+                    <h1 className="is-size-5">Grams Used:</h1>
                     <Input
                       value={this.state.subtract}
                       onChange={this.handleInputChange}
                       name="subtract"
-                      placeholder="Quantity to Subtract (required)"
+                      placeholder="Grams Used (required)"
                     />
                     <div className="field is-grouped">
                       <p className="control">
