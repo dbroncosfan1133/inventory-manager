@@ -5,6 +5,9 @@ export default {
   getAllInventory: function() {
     return axios.get("/api/inventory");
   },
+  getLowInventory: function() {
+    return axios.get("/api/inventory/low");
+  },
   // Gets the inventory item with the given id
   getInventory: function(id) {
     return axios.get("/api/inventory/" + id);

@@ -8,6 +8,13 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  findLow: function(req, res) {
+    db.Inventory
+      .find({Quantity: { $gt: 15 } })
+      .sort({ itemNumber: -1 })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
   findById: function(req, res) {
     db.Inventory
       .findById(req.params.id)

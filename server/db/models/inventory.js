@@ -20,7 +20,7 @@ var InventorySchema = new Schema({
       required: true
   },
   Size: {
-      type: String,
+      type: Number,
       required: true
   },
   "UPC Code": {
