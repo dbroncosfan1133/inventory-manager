@@ -24,8 +24,8 @@ class AddPage extends React.Component {
     handleFormSubmit = event => {
       // event.preventDefault();
       if (this.state.itemNumber && this.state.add) {
-        API.addInventory({
-          ItemNumber: this.state.ItemNumber,
+        API.changeInventory({
+          itemNumber: this.state.itemNumber,
           add: this.state.add
         })
           .then(res => this.viewInventory())
