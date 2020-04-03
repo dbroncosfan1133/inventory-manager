@@ -3,9 +3,10 @@
 }
 
 .card {
-    padding: 30px;
+    padding: 80px;
     border-radius: 10px;
     opacity: 90%;
+    margin: 30px;
 }
 
 .wrapper {
