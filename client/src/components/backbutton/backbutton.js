@@ -10,7 +10,7 @@ class BackButton extends React.Component {
         return (
             <div className="buttons">
                 <Link to={"/mainpage"}>
-                    <button className="button back is-large" onClick={this.handleClick.bind(this)}>Go Back</button>
+                    <button className="button back is-large" onClick={this.handleClick.bind(this)}>Back</button>
                 </Link>
             </div>
         )
