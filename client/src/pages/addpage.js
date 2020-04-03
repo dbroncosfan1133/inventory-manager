@@ -21,17 +21,21 @@ class AddPage extends React.Component {
     });
   };
 
-    handleFormSubmit = event => {
-      // event.preventDefault();
-      if (this.state.itemNumber && this.state.add) {
-        API.changeInventory({
-          itemNumber: this.state.itemNumber,
-          add: this.state.add
-        })
-          .then(res => this.viewInventory())
-          .catch(err => console.log(err));
-      }
-    };
+  handleFormSubmit = event => {
+    event.preventDefault();
+    if (this.state.itemNumber && this.state.add) {
+      API.addInventory(this.state.itemNumber, {add: parseFloat(this.state.add)})
+      .then(res => this.clearForm())
+      .catch(err => console.log(err));
+    }
+  };
+
+  clearForm = () => {
+    this.setState({
+      itemNumber: "",
+      add: ""
+    })
+  }
 
   render() {
     return (
