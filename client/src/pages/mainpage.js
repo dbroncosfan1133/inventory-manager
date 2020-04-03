@@ -22,16 +22,16 @@ function MainPage() {
                             </div>
                         </div>
                     </div>
-                    <div className="column is-2">
+                    <ul className="column is-2">
+                        <AddInventBtn />
                         <ViewInventory />
                         <LowInventoryBtn />
-                        <AddInventBtn />
-                    </div>
-                    <div className="column is-2">
+                    </ul>
+                    <ul className="column is-2">
+                        <SubInventBtn />
                         <AddItemBtn />
                         {/* <AddCategoryBtn /> */}
-                        <SubInventBtn />
-                    </div>
+                    </ul>
                     <div className="colmun is-2"></div>
                 </div>
             </div>
