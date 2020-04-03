@@ -36,14 +36,20 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {
-      const tempObj = {
-      Quantity: req.body.quantity,
+    if (req.body.add) {
+      db.Inventory
+        .findOneAndUpdate({ ["Item Number"]: req.params.id }, { $inc: {Quantity: req.body.add}})
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err));
     }
-    db.Inventory
-      .findOneAndUpdate({ _id: req.params.id }, tempObj)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+    else if (req.body.subtract) {
+      db.Inventory
+        .findOneAndUpdate({ ["Item Number"]: req.params.id }, { $inc: {Quantity: req.body.subtract}})
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err));
+    }
   },
+
   remove: function(req, res) {
     db.Inventory
       .findById({ _id: req.params.id })

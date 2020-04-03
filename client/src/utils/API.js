@@ -21,8 +21,12 @@ export default {
     return axios.post("/api/inventory", inventoryData);
   },
 
-  changeInventory: function(id) {
-    return axios.put("/api/inventory/" + id);
+  addInventory: function(itemNumber, add) {
+    return axios.put("/api/inventory/" + itemNumber, add);
+  },
+
+  subInventory: function(itemNumber, subtract) {
+    return axios.put("/api/inventory/" + itemNumber, subtract);
   },
 
 };

@@ -23,19 +23,19 @@ class SubPage extends React.Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    
+    if (this.state.itemNumber && this.state.subtract) {
+      API.subInventory(this.state.itemNumber, {subtract: parseFloat(-this.state.subtract)})
+        .then(res => this.clearForm())
+        .catch(err => console.log(err));
+    }
+  };
+
+  clearForm = () => {
+    this.setState({
+      itemNumber: "",
+      subtract: ""
+    })
   }
-    handleFormSubmit = event => {
-      // event.preventDefault();
-      if (this.state.itemNumber && this.state.subtract) {
-        API.changeInventory({
-          itemNumber: this.state.itemNumber,
-          subtract: this.state.subtract
-        })
-          .then(res => this.viewInventory())
-          .catch(err => console.log(err));
-      }
-    };
 
   render() {
     return (
