@@ -46,6 +46,7 @@ class AddNewItem extends Component {
     });
   }
 
+
   render() {
     return (
       <div className="wrapper">
@@ -72,7 +73,7 @@ class AddNewItem extends Component {
                     value={this.state.quantity}
                     onChange={this.handleInputChange}
                     name="quantity"
-                    placeholder="Quantity(required)"
+                    placeholder="Quantity (required)"
                   />
                   <h1 className="is-size-6">Description:</h1>
                   <Input
@@ -81,13 +82,25 @@ class AddNewItem extends Component {
                     name="description"
                     placeholder="Description (required)"
                   />
+      
+                  <h1 className="is-size-6">Size (mL):</h1>
+                  <Input
+                    value={this.state.size}
+                    onChange={this.handleInputChange}
+                    name="size"
+                    placeholder="Size (required)"
+                  />
+
                   <h1 className="is-size-6">Cost:</h1>
+
                   <Input
                     value={this.state.salonEach}
                     onChange={this.handleInputChange}
                     name="salonEach"
-                    placeholder="Salon Each (required)"
+                    placeholder="Salon Price (required)"
                   />
+
+
                   <h1 className="is-size-6">Category:</h1>
                   <Input
                     value={this.state.category}
@@ -99,7 +112,9 @@ class AddNewItem extends Component {
                     <p className="control">
                       <FormBtn
                         disabled={!(this.state.itemNumber && this.state.quantity
+
                           && this.state.description && this.state.salonEach)}
+
                         onClick={this.handleFormSubmit}
                       >
                         Submit Item

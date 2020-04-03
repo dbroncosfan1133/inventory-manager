@@ -4,6 +4,7 @@ import { Input, FormBtn } from "../components/form/form";
 import HeroMain from "../components/heromain/heromain";
 import Footer from "../components/footer/footer";
 import "./pages.css"
+import API from "../utils/API"
 
 class AddPage extends React.Component {
   state = {
@@ -12,6 +13,7 @@ class AddPage extends React.Component {
     add: ""
   };
 
+
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -19,17 +21,17 @@ class AddPage extends React.Component {
     });
   };
 
-  //   handleFormSubmit = event => {
-  //     event.preventDefault();
-  //     if (this.state.itemNumber && this.state.subtract) {
-  //       API.subtractQuantity({
-  //         itemNumber: this.state.itemNumber,
-  //         subtract: this.state.subtract
-  //       })
-  //         .then(res => this.viewInventory())
-  //         .catch(err => console.log(err));
-  //     }
-  //   };
+    handleFormSubmit = event => {
+      // event.preventDefault();
+      if (this.state.itemNumber && this.state.add) {
+        API.changeInventory({
+          itemNumber: this.state.itemNumber,
+          add: this.state.add
+        })
+          .then(res => this.viewInventory())
+          .catch(err => console.log(err));
+      }
+    };
 
   render() {
     return (
@@ -55,7 +57,7 @@ class AddPage extends React.Component {
                     <Input
                       value={this.state.add}
                       onChange={this.handleInputChange}
-                      name="subtract"
+                      name="add"
                       placeholder="Quantity to Add (required)"
                     />
                     <div className="field is-grouped">
