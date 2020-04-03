@@ -4,6 +4,8 @@ import { Input, FormBtn } from "../components/form/form";
 import HeroMain from "../components/heromain/heromain";
 import Footer from "../components/footer/footer";
 import "./pages.css"
+import API from "../utils/API"
+
 
 class SubPage extends React.Component {
   state = {
@@ -24,7 +26,7 @@ class SubPage extends React.Component {
     
   }
     handleFormSubmit = event => {
-      event.preventDefault();
+      // event.preventDefault();
       if (this.state.itemNumber && this.state.subtract) {
         API.changeInventory({
           itemNumber: this.state.itemNumber,
