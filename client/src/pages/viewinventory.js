@@ -24,7 +24,38 @@ function InventoryPage() {
                 <Inventorytbl />
               </div>
             </div>
-            <div className="column is-2">
+            <div className="column is-4">
+              {/* <div className="container"> */}
+                <ul>
+                  <li className="buttonLayout">
+                    <AddInventBtn />
+                  </li>
+                  <li className="buttonLayout">
+                    <SubInventBtn />
+                  </li>
+                  <li className="buttonLayout">
+                    <AddItemBtn />
+                  </li>
+                  <li className="buttonLayout">
+                    <BackButton />
+                  </li>
+                </ul>
+              {/* </div> */}
+            </div>
+            {/* <div className="column is-2"> */}
+              {/* <div className="container"> */}
+                {/* <ul>
+                  <li>
+                    <AddItemBtn />
+                  </li>
+                  <li>
+                    <BackButton />
+                  </li>
+                </ul> */}
+              {/* </div> */}
+            {/* </div> */}
+
+            {/* <div className="column is-2">
               <div className="field is-grouped">
                 <p className="control">
                   <AddInventBtn />
@@ -33,7 +64,7 @@ function InventoryPage() {
                   <AddItemBtn />
                 </p>
               </div>
-              <div className="column is-2">
+              <div className="column">
                 <div className="field is-grouped">
                   <p className="control">
                     <SubInventBtn />
@@ -43,7 +74,7 @@ function InventoryPage() {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

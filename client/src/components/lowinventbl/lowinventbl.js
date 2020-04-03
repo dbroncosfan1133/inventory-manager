@@ -31,14 +31,6 @@ class LowInventView extends React.Component {
                                 <th>Salon Each</th>
                             </tr>
                         </thead>
-                        <tfoot>
-                            <tr>
-                                <th>Item Number</th>
-                                <th>Quantity</th>
-                                <th>Description</th>
-                                <th>Salon Each</th>
-                            </tr>
-                        </tfoot>
                         <tbody>
                             <td>
                                 {this.state.lowInventory.map(invent => (
