@@ -10,7 +10,7 @@ module.exports = {
   },
   findLow: function(req, res) {
     db.Inventory
-      .find({Quantity: { $gt: 15 } })
+      .find({Quantity: { $lte: 30 } })
       .sort({ itemNumber: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));

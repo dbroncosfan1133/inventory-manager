@@ -15,7 +15,7 @@ function LowPage() {
       <div className="container mainContain">
         <div className="card">
           <div className="card-title">
-            <h1 className="is-size-1">View Inventory</h1>
+            <h1 className="is-size-1">Low Inventory</h1>
             <hr />
           </div>
           <div className="columns is-multiline">
