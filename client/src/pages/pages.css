@@ -9,6 +9,13 @@
     margin: 30px;
 }
 
+.cardSmall {
+    padding: 30px;
+    border-radius: 10px;
+    opacity: 90%;
+    background-color: white;
+}
+
 .wrapper {
         min-height: 100%;
         margin-bottom: -100px;
