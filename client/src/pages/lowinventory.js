@@ -24,25 +24,21 @@ function LowPage() {
                 <LowInventView />
               </div>
             </div>
-            <div className="column is-2">
-              <div className="field is-grouped">
-                <p className="control">
+            <div className="column is-4">
+              <ul>
+                <li className="buttonLayout">
                   <AddInventBtn />
-                </p>
-                <p className="control">
+                </li>
+                <li className="buttonLayout">
+                  <SubInventBtn />
+                </li>
+                <li className="buttonLayout">
                   <AddItemBtn />
-                </p>
-              </div>
-              <div className="column is-2">
-                <div className="field is-grouped">
-                  <p className="control">
-                    <SubInventBtn />
-                  </p>
-                  <p className="control">
-                    <BackButton />
-                  </p>
-                </div>
-              </div>
+                </li>
+                <li className="buttonLayout">
+                  <BackButton />
+                </li>
+              </ul>
             </div>
           </div>
         </div>
