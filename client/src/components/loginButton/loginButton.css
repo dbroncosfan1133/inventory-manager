@@ -1,10 +1,10 @@
-.login {
+.loginBtn {
 color: white;
 background-color: #eac67a;
 border-color: #eac67a;
 };
 
-.login:hover {
+.loginBtn:hover {
     color: #233237;
     border-color: #eac67a;
 }
