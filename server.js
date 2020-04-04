@@ -6,7 +6,8 @@ var mongoose = require("mongoose");
 var passport = require("passport");
 const routes = require("./routes");
 const flash = require('connect-flash');
-const session = require('express-session')
+const session = require('express-session');
+const path = require("path")
 // Passport config
 require('./passport/index')(passport);
 
@@ -29,9 +30,9 @@ app.use(express.urlencoded({
 }));
 app.use(express.json());
 // Make public a static folder
-app.use(express.static(path.join(__dirname, 'client/public')));
 const root = require('path').join(__dirname, 'client', 'build')
 app.use(express.static(root));
+app.use(express.static(path.join(__dirname, 'client/public')));
 // Use the routes folder
 app.use(routes);
 
