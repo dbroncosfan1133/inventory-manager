@@ -5,13 +5,14 @@
 .card {
     padding: 80px;
     border-radius: 10px;
-    opacity: 90%;
+    opacity: 0.9;
     margin: 30px;
 }
 
 .cardSmall {
     padding: 30px;
     border-radius: 10px;
+    opacity: 0.9;
     background-color: white;
 }
 
@@ -22,7 +23,7 @@
 }
 
 .welcome {
-    opacity: 50%;
+    opacity: 0.5;
 }
 
 .buttonLayout {
