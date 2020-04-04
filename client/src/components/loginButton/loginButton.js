@@ -1,7 +1,6 @@
 import React from "react";
-import "./loginButton.css";
 import { Link } from "react-router-dom";
-
+import "./loginButton.css";
 
 class Login extends React.Component {
     handleClick() {
@@ -11,7 +10,7 @@ class Login extends React.Component {
         return (
             <div className="buttons">
                 <Link to={"/mainpage"}>
-                    <button className="button login is-large" onClick={this.handleClick.bind(this)}>Login</button>
+                    <button className="button loginBtn is-large" onClick={this.handleClick.bind(this)}>Login</button>
                 </Link>
             </div>
         )
