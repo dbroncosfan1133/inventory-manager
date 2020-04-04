@@ -6,7 +6,8 @@ var mongoose = require("mongoose");
 var passport = require("passport");
 const routes = require("./routes");
 const flash = require('connect-flash');
-const session = require('express-session')
+const session = require('express-session');
+const path = require("path")
 // Passport config
 require('./passport/index')(passport);
 
